@@ -3,15 +3,81 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
-        <event-block sid="489304318508405">
+        <variable constant="0" name="pontos" sid="760662759092508" static="0" type="number">0</variable>
+        <event-block sid="538670596293752">
             <conditions>
-                <condition id="-2" name="Compare Y" sid="349149677179720" type="Mario">
-                    <param id="0" name="Comparison">4</param>
-                    <param id="1" name="Y co-ordinate">672</param>
+                <condition id="-2" name="On start of layout" sid="833655923741678" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="836430892809277" type="Placar">
+                    <param id="0" name="Pin to">heroi</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="467362067908680" type="heroanimation">
+                    <param id="0" name="Object">heroi</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="266743336716916" type="heroanimation">
+                    <param id="0" name="Pin to">heroi</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="675960196851846">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="590052828813790" type="heroi">
+                    <param id="0" name="Object">Moeda</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-26" name="Restart layout" sid="480943462247992" type="System" />
+                <action id="-9" name="Destroy" sid="597554568382211" type="Moeda" />
+                <action id="-10" name="Add to" sid="533586725808528" type="System">
+                    <param id="0" name="Variable">pontos</param>
+                    <param id="1" name="Value">10</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="612632396451460">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="910833730610496" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="923533286452683" type="Placar">
+                    <param id="0" name="Text">&quot;Pontos: &quot;&amp;pontos</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="602760174407030">
+            <conditions>
+                <condition id="-2" name="Compare Y" sid="586298552149877" type="heroi">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="Y co-ordinate">710</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Restart layout" sid="896288148444190" type="System" />
+            </actions>
+        </event-block>
+        <event-block sid="660853943873095">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="683667964580983" type="inimigo01">
+                    <param id="0" name="Object">heroi</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="906681659373131" type="heroi" />
+            </actions>
+        </event-block>
+        <event-block sid="949940936209772">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="291488393688262" type="inimigo02">
+                    <param id="0" name="Object">heroi</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="109281422839330" type="heroi" />
             </actions>
         </event-block>
     </events>
