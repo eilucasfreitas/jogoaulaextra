@@ -10,15 +10,15 @@
     <unique-id>204464236bjbk</unique-id>
     <saved-with-version>27700</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
-        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
@@ -112,53 +112,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite2" sid="458007923279171">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="719405606124510" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="inimigo01" sid="465848569903168">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Bullet" sid="313336325289588">
-                    <behavior id="Bullet" />
-                </behavior-type>
-                <behavior-type name="8Direction" sid="562092647994229">
-                    <behavior id="EightDir" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="451106258815353" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.502924" original-source="C:\Users\Aluno13\Pictures\inimigo.jpg" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="inimigo02" sid="155198362045569">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="590661196764483" speed="5">
-                    <frame duration="1" hotspotX="0.502439" hotspotY="0.5" original-source="C:\Users\Aluno13\Pictures\inimigo02.jpg">
-                        <collision-poly>
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite3" sid="745002802699666">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="268488542010807" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="base03" sid="739728108816663">
             <plugin id="Sprite" />
             <behaviors>
@@ -226,6 +179,127 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Keyboard" sid="509303972256420">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="Sprite" sid="297032965439313">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="461401796811395" speed="5">
+                    <frame duration="1" hotspotX="0.500556" hotspotY="0.5" original-source="C:\Users\Aluno13\Pictures\jogo01.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite2" sid="883990859142099">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="501659782539801" speed="5">
+                    <frame duration="1" hotspotX="0.500557" hotspotY="0.5" original-source="C:\Users\Aluno13\Pictures\jogo02.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="moeda01" sid="617483705211472">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Rotate" sid="311973202561240">
+                    <behavior id="Rotate" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="121368836482986" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aluno13\Desktop\Sprite\kenney-platformer-art-base-pack\Items\coinGold.png">
+                        <collision-poly>
+                            <point x="0.328571" y="0.328571" />
+                            <point x="0.5" y="0.271429" />
+                            <point x="0.671429" y="0.328571" />
+                            <point x="0.742857" y="0.5" />
+                            <point x="0.685714" y="0.685714" />
+                            <point x="0.5" y="0.757143" />
+                            <point x="0.314286" y="0.685714" />
+                            <point x="0.257143" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="inimigo01" sid="358884351022815">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="214399572813839">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="510653303368859" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aluno13\Desktop\Sprite\kenney-platformer-art-base-pack\Enemies\flyFly1.png">
+                        <collision-poly>
+                            <point x="0.0555556" y="0.111111" />
+                            <point x="0.5" y="0.138889" />
+                            <point x="0.944444" y="0.111111" />
+                            <point x="0.847222" y="0.5" />
+                            <point x="0.777778" y="0.555556" />
+                            <point x="0.5" y="1" />
+                            <point x="0.208333" y="0.583333" />
+                            <point x="0.138889" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite4" sid="405861390475701">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="699716170399919" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aluno13\Desktop\Sprite\kenney-platformer-art-base-pack\Items\coinSilver.png">
+                        <collision-poly>
+                            <point x="0.328571" y="0.328571" />
+                            <point x="0.5" y="0.271429" />
+                            <point x="0.671429" y="0.328571" />
+                            <point x="0.742857" y="0.5" />
+                            <point x="0.685714" y="0.685714" />
+                            <point x="0.5" y="0.757143" />
+                            <point x="0.314286" y="0.685714" />
+                            <point x="0.257143" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="coracao" sid="889220402547053">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="501497117174747">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="4" loop="0" name="coracao" pingpong="0" repeatcount="0" repeatto="0" sid="591408130315357" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.503067" hotspotY="0.511111" />
+                    <frame duration="1" hotspotX="0.503067" hotspotY="0.511111" />
+                    <frame duration="1" hotspotX="0.503067" hotspotY="0.511111" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite5" sid="877396528662031">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="822004393648739" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aluno13\Desktop\Sprite\kenney-platformer-art-base-pack\Items\coinBronze.png">
+                        <collision-poly>
+                            <point x="0.328571" y="0.328571" />
+                            <point x="0.5" y="0.271429" />
+                            <point x="0.671429" y="0.328571" />
+                            <point x="0.742857" y="0.5" />
+                            <point x="0.685714" y="0.685714" />
+                            <point x="0.5" y="0.757143" />
+                            <point x="0.314286" y="0.685714" />
+                            <point x="0.257143" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -234,7 +308,9 @@
     <event-folder>
         <event-sheet>Event sheet 1.xml</event-sheet>
     </event-folder>
-    <global-instances />
+    <global-instances>
+        <global-instance type="Keyboard" uid="19" />
+    </global-instances>
     <sounds-folder />
     <music-folder />
     <files-folder>
