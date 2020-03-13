@@ -142,11 +142,11 @@
         <event-block sid="485449333862137">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="767616251107313" type="heroi">
-                    <param id="0" name="Object">Sprite4</param>
+                    <param id="0" name="Object">moeda02</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Destroy" sid="682059335232960" type="Sprite4" />
+                <action id="-9" name="Destroy" sid="682059335232960" type="moeda02" />
                 <action id="-10" name="Add to" sid="469915272974571" type="System">
                     <param id="0" name="Variable">pontos</param>
                     <param id="1" name="Value">5</param>
@@ -170,7 +170,7 @@
         <event-block sid="910783853864340">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="841953687161879" type="heroi">
-                    <param id="0" name="Object">inimigo01</param>
+                    <param id="0" name="Object">abelha01</param>
                 </condition>
             </conditions>
             <actions>
@@ -194,6 +194,16 @@
                 </action>
                 <action id="-26" name="Restart layout" sid="936793609846970" type="System" />
                 <action id="-21" name="Reset global variables" sid="211213806907984" type="System" />
+            </actions>
+        </event-block>
+        <event-block sid="776794644238260">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="785705787751322" type="inimigo02">
+                    <param id="0" name="Object">heroi</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="712242247743061" type="inimigo02" />
             </actions>
         </event-block>
     </events>
